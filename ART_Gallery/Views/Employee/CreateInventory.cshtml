@@ -1,0 +1,13 @@
+﻿@model ART_Gallery.ViewModels.MainViewModel
+
+<h2>Add New Inventory</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Label("Name")
+    @Html.EditorFor(model => model.Name)
+
+    <input type="submit" value="Create" />
+}
+
+@Html.ActionLink("Back to homepage", "Index")

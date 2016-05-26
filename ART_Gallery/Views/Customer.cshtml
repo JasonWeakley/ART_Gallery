@@ -1,0 +1,25 @@
+﻿@model ART_Gallery.ViewModels.MainViewModel
+<h1>Boring Gallery</h1>
+<h2>Customer View / products</h2>
+
+<table>
+    @foreach (var item in Model.ProductId)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(ModelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(ModelItem => item.DepartmentName)
+            </td>
+            <td>
+                @Html.ActionLink("edit", "Edit", new { employeeId = item.EmployeeId })
+            </td>
+            <td>
+                @Html.ActionLink("delete", "Delete", new { employeeId = item.EmployeeId })
+            </td>
+        </tr>
+    }
+</table>
+
+
