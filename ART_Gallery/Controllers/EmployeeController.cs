@@ -7,8 +7,12 @@ namespace ART_Gallery.Controllers
 {
     public class EmployeeController : Controller
     {
-        // GET: Employee
         public ActionResult Index()
+        {
+            return View();
+        }
+        // GET: Employee
+        public ActionResult Owner()
         {
             ArtGalleryContext _employeeContext = new ArtGalleryContext();
 

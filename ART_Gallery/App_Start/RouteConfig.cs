@@ -17,7 +17,7 @@ namespace ART_Gallery
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Employee", action = "CreateInventory", id = UrlParameter.Optional }
+                defaults: new { controller = "Employee", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
