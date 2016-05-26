@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace ART_Gallery
+    // this is a comment
 {
     public class RouteConfig
     {
