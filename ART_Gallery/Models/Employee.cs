@@ -8,6 +8,6 @@ namespace ART_Gallery.Models
     public class Employee
     {
         public int EmployeeId { get; set; }
-        public object GalleryId { get; internal set; }
+        public object GalleryId { get; set; }
     }
 }
