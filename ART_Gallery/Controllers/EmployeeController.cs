@@ -7,10 +7,6 @@ namespace ART_Gallery.Controllers
 {
     public class EmployeeController : Controller
     {
-        public ActionResult Index()
-        {
-            return View();
-        }
         // GET: Employee
         public ActionResult Owner()
         {
@@ -35,6 +31,21 @@ namespace ART_Gallery.Controllers
             return View(employeeView);
 
         }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         [HttpGet]
         public ActionResult CreateInventory()

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ART_Gallery.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,5 +23,7 @@ namespace ART_Gallery.Models
         public double Height { get; set; }
         public double Depth { get; set; }
         public double Weight { get; set; }
+        public List<MainViewModel> CurrentInventory { get; set; }
+
     }
 }

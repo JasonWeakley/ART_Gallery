@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ART_Gallery.ViewModels.MainViewModel>
+
+<h2>Customer</h2>
+<p>Put the customer here</p>
+
+<h2>Employee</h2>
+<table>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(ModelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(ModelItem => item.Inventory)
+        </td>
+        <td>
+            @Html.DisplayFor(ModelItem => item.RetailPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(ModelItem => item.PurchasePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(ModelItem => item.Image)
+        </td>
+    </tr>
+    }
+</table>
+
+
