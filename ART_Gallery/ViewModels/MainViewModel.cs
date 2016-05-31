@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ART_Gallery.ViewModels
 {
     public class MainViewModel
     {
+        [Key]
         public int ProductId { get; set; }
         public int GalleryId { get; set; }
         public int CustomerId { get; set; }
