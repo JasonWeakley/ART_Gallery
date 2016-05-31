@@ -32,7 +32,45 @@ namespace ART_Gallery.Controllers
 
         }
 
-        
+        public ActionResult ShowInventory()
+            // the return statement below where qq is passed allows this method to communicate 
+            // with the cshtml file of the same name and "@model" this data
+        {
+            ArtGalleryContext _inventoryContext = new ArtGalleryContext();
+
+            //var NorthGallery = (from p in _inventoryContext.Product
+            //                       where p.GalleryId == 2 && p.Inventory > 0
+            //                       select new MainViewModel
+            //                       {
+            //                           Name = p.Name,
+            //                           Inventory = p.Inventory,
+            //                           RetailPrice = p.RetailPrice,
+            //                           PurchasePrice = p.PurchasePrice,
+            //                           Image = p.Image
+            //                       }).ToList();
+            var q = (from p in _inventoryContext.ProductDbSet
+                    orderby p.GalleryId
+                    where p.Inventory > 0
+                    select new
+                    {
+                        Name = p.Name,
+                        Inventory = p.Inventory,
+                        RetailPrice = p.RetailPrice,
+                        PurchasePrice = p.PurchasePrice,
+                        Image = p.Image
+                    }).ToList();
+
+            var qq = q.AsEnumerable().Select(xx => new MainViewModel
+            {
+                Name = xx.Name,
+                Inventory = xx.Inventory,
+                RetailPrice = xx.RetailPrice,
+                PurchasePrice = xx.PurchasePrice,
+                Image = xx.Image
+            }).ToList();
+
+            return View(qq);
+        }
 
 
 
@@ -73,7 +111,7 @@ namespace ART_Gallery.Controllers
                         Depth = productDetails.Depth,
                         Weight = productDetails.Weight
                     };
-                    _context.Product.Add(product); // "saves" in context to data in working memory
+                    _context.ProductDbSet.Add(product); // "saves" in context to data in working memory
                     _context.SaveChanges(); // saves to the database
                     return RedirectToAction("Index");
                 }

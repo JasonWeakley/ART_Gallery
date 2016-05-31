@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,6 +8,8 @@ namespace ART_Gallery.ViewModels
 {
     public class CurrentInventoryViewModel
     {
+        // a [Key] is necessary for the ShowInventory method to work because
+        [Key]
         public int ProductId { get; set; }
         public int GalleryId { get; set; }
         public int ArtistId { get; set; }

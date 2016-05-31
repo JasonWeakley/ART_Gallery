@@ -10,7 +10,7 @@ namespace ART_Gallery.Models
     {
         public DbSet<Employee> Employee { get; set; }
         public DbSet<Customer> Customer { get; set; }
-        public DbSet<Product> Product { get; set; }
+        public DbSet<Product> ProductDbSet { get; set; }
         public DbSet<Gallery> Gallery { get; set; }
         public DbSet<Event> Event { get; set; }
 
