@@ -23,7 +23,8 @@ namespace ART_Gallery.Models
         public double Height { get; set; }
         public double Depth { get; set; }
         public double Weight { get; set; }
-        public List<MainViewModel> CurrentInventory { get; set; }
+        //You can have lists of Models but NOT ViewModels!!!!
+        //public List<MainViewModel> CurrentInventory { get; set; }
 
     }
 }

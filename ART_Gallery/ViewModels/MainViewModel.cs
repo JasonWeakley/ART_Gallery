@@ -34,7 +34,7 @@ namespace ART_Gallery.ViewModels
         public int Inventory { get; set; }
         public string EventName { get; set; }
         public int EmployeeId { get; set; }
-        public List<MainViewModel> Events { get; set; }
-        public List<CurrentInventoryViewModel> CurrentInventory { get; set; }
+        //public List<MainViewModel> Events { get; set; }
+        //public List<CurrentInventoryViewModel> CurrentInventory { get; set; }
     }
 }

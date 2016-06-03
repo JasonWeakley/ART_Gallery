@@ -1,9 +1,30 @@
-﻿<h2>Customer</h2>
+﻿@*@model ART_Gallery.ViewModels.TestViewModel*@
+
+<h2>Customer</h2>
 <p>Put the customer stuff here</p>
 
 <h2>Employee</h2>
     @Html.ActionLink("My Inventory", "ShowInventory", "Employee")
 
+@*
+KEEP THIS INFORMATION HERE AND SEE NOTES IN EMPLOYEECONTROLLER.CS
 
+<h2>Inventory</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Retail Price</th>
+        <th>Purchase Price</th>
+        <th>Image</th>
+    </tr>
+    @foreach (var item in Model.AllInventory)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+        </tr>
+    }
+</table>*@
 
 

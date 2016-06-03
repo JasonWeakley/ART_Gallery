@@ -10,12 +10,30 @@ namespace ART_Gallery.Controllers
 {
     public class HomeController : Controller
     {
+        ///
+        /// Do not delete Index() method below, see notes from EmployeeController.cs
+        ///
+
         // GET: Home
-        public ActionResult Index()
-        {
-            return View();
-        }
-        // GET: Show inventory
-        
+        //public ActionResult Index()
+        //{
+        //    ArtGalleryContext _testContext = new ArtGalleryContext();
+
+        //    List<MainViewModel> test = (from p in _testContext.ProductDbSet
+        //                                select new MainViewModel
+        //                                {
+        //                                    Name = p.Name,
+        //                                    Inventory = p.Inventory,
+        //                                }).ToList();
+
+        //    // Cannot pass a list of ViewModels to a view, but you can pass a list of
+        //    // Models to a view, as long as its a property of a different ViewModel.
+        //    TestViewModel batman = new TestViewModel
+        //    {
+        //        AllInventory = test
+        //    };
+
+        //    return View(batman);
+        //}
     }
 }
