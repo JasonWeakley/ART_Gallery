@@ -8,6 +8,8 @@ namespace ART_Gallery.Models
 {
     public class ArtGalleryContext : DbContext
     {
+        // as a personal naming convention, 
+        // name the DbSets with either "DbSet" or "DbContext" appended to the variable name
         public DbSet<Employee> Employee { get; set; }
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Product> ProductDbSet { get; set; }
@@ -23,7 +25,10 @@ namespace ART_Gallery.Models
                 .ToTable("Employee")
                 .HasKey(c => c.EmployeeId);
 
+            // The aqua colored Customer inside <> is modeling the table in the database
+            // it refers to the Model called Customer in the Model folder
             modelBuilder.Entity<Customer>()
+                // the red is referring to the actual table in the DB
                 .ToTable("Customer")
                 .HasKey(c => c.CustomerId);
 

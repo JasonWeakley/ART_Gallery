@@ -25,6 +25,6 @@ namespace ART_Gallery.ViewModels
         public string Description { get; set; }
         public string Name { get; set; }
         public int Inventory { get; set; }
-        public List<MainViewModel> CurrentInventory { get; set; }
+        //public List<MainViewModel> CurrentInventory { get; set; }
     }
 }

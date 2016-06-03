@@ -2,14 +2,17 @@
 
 <h2>Inventory</h2>
 <table>
+    <tr>
+        <th>Name</th>
+        <th>Retail Price</th>
+        <th>Purchase Price</th>
+        <th>Image</th>
+    </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Inventory)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.RetailPrice)
