@@ -52,14 +52,14 @@ namespace ART_Gallery.Controllers
             ArtGalleryContext _inventoryContext = new ArtGalleryContext();
 
             List<MainViewModel> currentInventory = (from p in _inventoryContext.ProductDbSet
-                     //orderby p.GalleryId
-                     //where p.Inventory > 0
+                     orderby p.GalleryId
+                     where p.Inventory > 0
                      select new MainViewModel
                      {
                          Name = p.Name,
                          Inventory = p.Inventory,
-                         //RetailPrice = p.RetailPrice,
-                         //PurchasePrice = p.PurchasePrice,
+                         RetailPrice = p.RetailPrice,
+                         PurchasePrice = p.PurchasePrice,
                          Image = p.Image
                      }).ToList();
 
